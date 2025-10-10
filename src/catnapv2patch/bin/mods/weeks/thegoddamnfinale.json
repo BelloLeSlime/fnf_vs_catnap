@@ -1,0 +1,32 @@
+{
+	"storyName": "NO CONTROL",
+	"difficulties": "Hard",
+	"hideFreeplay": false,
+	"weekBackground": "catshit",
+	"weekBefore": "recoveredtape",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": false,
+	"hideStoryMode": true,
+	"songs": [
+		[
+			"Control",
+			"smoke",
+			[
+				60,
+				0,
+				20
+			]
+		]
+	],
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"hiddenUntilUnlocked": true,
+	"weekName": "The Hive Mind"
+}

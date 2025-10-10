@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="nappycat.png"><SubTexture name="nappycat idle0000" x="0" y="1915" width="639" height="907" frameX="-187" frameY="-187" frameWidth="985" frameHeight="1106" />
+<SubTexture name="nappycat idle0001" x="2574" y="0" width="622" height="923" frameX="-193" frameY="-172" frameWidth="985" frameHeight="1106" />
+<SubTexture name="nappycat idle0002" x="2574" y="923" width="599" height="923" frameX="-196" frameY="-172" frameWidth="985" frameHeight="1106" />
+<SubTexture name="nappycat idle0003" x="796" y="990" width="597" height="924" frameX="-200" frameY="-169" frameWidth="985" frameHeight="1106" />
+<SubTexture name="nappycat idle0004" x="1977" y="0" width="597" height="924" frameX="-200" frameY="-169" frameWidth="985" frameHeight="1106" />
+<SubTexture name="nappycat left0000" x="1387" y="1915" width="761" height="860" frameX="-37" frameY="-233" frameWidth="985" frameHeight="1106" />
+<SubTexture name="nappycat left0001" x="639" y="1915" width="748" height="866" frameX="-56" frameY="-229" frameWidth="985" frameHeight="1106" />
+<SubTexture name="nappycat down0000" x="3196" y="0" width="756" height="571" frameX="-130" frameY="-530" frameWidth="985" frameHeight="1106" />
+<SubTexture name="nappycat down0001" x="2148" y="1915" width="738" height="584" frameX="-138" frameY="-518" frameWidth="985" frameHeight="1106" />
+<SubTexture name="nappycat up0000" x="0" y="0" width="588" height="990" frameX="-201" frameY="-102" frameWidth="985" frameHeight="1106" />
+<SubTexture name="nappycat up0001" x="588" y="0" width="597" height="985" frameX="-195" frameY="-108" frameWidth="985" frameHeight="1106" />
+<SubTexture name="nappycat right0000" x="0" y="990" width="796" height="925" frameX="-178" frameY="-173" frameWidth="985" frameHeight="1106" />
+<SubTexture name="nappycat right0001" x="1185" y="0" width="792" height="930" frameX="-175" frameY="-168" frameWidth="985" frameHeight="1106" />
+</TextureAtlas>

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="rapperroo.png"><SubTexture name="karaokeith idle0000" x="0" y="3442" width="1205" height="1604" frameX="-573" frameY="-606" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="karaokeith idle0001" x="3605" y="1648" width="1205" height="1634" frameX="-584" frameY="-577" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="karaokeith idle0002" x="3605" y="0" width="1206" height="1648" frameX="-602" frameY="-564" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="karaokeith idle0003" x="1205" y="1784" width="1204" height="1650" frameX="-615" frameY="-559" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="karaokeith left0000" x="2405" y="0" width="1200" height="1664" frameX="-461" frameY="-546" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="karaokeith left0001" x="0" y="1784" width="1205" height="1658" frameX="-480" frameY="-553" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="karaokeith down0000" x="2409" y="3442" width="1201" height="1490" frameX="-512" frameY="-720" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="karaokeith down0001" x="1205" y="3442" width="1204" height="1536" frameX="-520" frameY="-675" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="karaokeith up0000" x="0" y="0" width="1201" height="1784" frameX="-677" frameY="-426" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="karaokeith up0001" x="1201" y="0" width="1204" height="1755" frameX="-659" frameY="-456" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="karaokeith right0000" x="4811" y="1623" width="1524" height="1611" frameX="-438" frameY="-599" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="karaokeith right0001" x="4811" y="0" width="1535" height="1623" frameX="-390" frameY="-588" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="rapperroo drop0000" x="6346" y="3425" width="2166" height="664" frameX="-73" frameY="-1571" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="rapperroo drop0001" x="6346" y="1307" width="2132" height="730" frameX="-55" frameY="-1505" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="rapperroo drop0002" x="6346" y="2737" width="2182" height="688" frameX="-39" frameY="-1547" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="rapperroo drop0003" x="6346" y="2037" width="2184" height="700" frameX="-30" frameY="-1534" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="rapperroo drop0004" x="6346" y="2037" width="2184" height="700" frameX="-30" frameY="-1534" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="rapperroo drop0005" x="6346" y="2037" width="2184" height="700" frameX="-30" frameY="-1534" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="rapperroo okay0000" x="3610" y="3442" width="2166" height="1328" frameX="-30" frameY="-907" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="rapperroo okay0001" x="0" y="5046" width="2198" height="1299" frameX="-30" frameY="-937" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="rapperroo okay0002" x="6346" y="0" width="2184" height="1307" frameX="-30" frameY="-927" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="rapperroo okay0003" x="6346" y="0" width="2184" height="1307" frameX="-30" frameY="-927" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="rapperroo okay0004" x="6346" y="0" width="2184" height="1307" frameX="-30" frameY="-927" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="rapperroo okay0005" x="6346" y="0" width="2184" height="1307" frameX="-30" frameY="-927" frameWidth="2274" frameHeight="2255" />
+</TextureAtlas>

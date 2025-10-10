@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Dogday.png">
+	<!-- Created with Adobe Animate version 22.0.3.179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Dogday0000" x="0" y="0" width="358" height="249"/>
+	<SubTexture name="Dogday0001" x="0" y="0" width="358" height="249"/>
+	<SubTexture name="Dogday0002" x="0" y="0" width="358" height="249"/>
+	<SubTexture name="Dogday0003" x="0" y="249" width="358" height="249"/>
+	<SubTexture name="Dogday0004" x="0" y="249" width="358" height="249"/>
+	<SubTexture name="Dogday0005" x="0" y="249" width="358" height="249"/>
+</TextureAtlas>

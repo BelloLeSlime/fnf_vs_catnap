@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				150
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "idle",
+			"indices": [],
+			"name": "karaokeithalt idle"
+		},
+		{
+			"offsets": [
+				0,
+				150
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "karaokeithalt left"
+		},
+		{
+			"offsets": [
+				0,
+				150
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "karaokeithalt down"
+		},
+		{
+			"offsets": [
+				0,
+				150
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "singUP",
+			"indices": [],
+			"name": "karaokeithalt up"
+		},
+		{
+			"offsets": [
+				0,
+				150
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "karaokeithalt right"
+		},
+		{
+			"offsets": [
+				0,
+				150
+			],
+			"loop": false,
+			"fps": 11,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "karaokeithalt miss"
+		},
+		{
+			"offsets": [
+				0,
+				150
+			],
+			"loop": false,
+			"fps": 11,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "karaokeithalt miss"
+		},
+		{
+			"offsets": [
+				0,
+				150
+			],
+			"loop": false,
+			"fps": 11,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "karaokeithalt miss"
+		},
+		{
+			"offsets": [
+				0,
+				150
+			],
+			"loop": false,
+			"fps": 11,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "karaokeithalt miss"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/blackroo",
+	"position": [
+		-850,
+		-570
+	],
+	"healthicon": "rapperrooalt",
+	"flip_x": true,
+	"healthbar_colors": [
+		109,
+		173,
+		255
+	],
+	"camera_position": [
+		-700,
+		680
+	],
+	"sing_duration": 5,
+	"scale": 0.34
+}

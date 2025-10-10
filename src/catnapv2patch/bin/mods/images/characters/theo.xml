@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="theo.png"><SubTexture name="theo idle0000" x="4906" y="1120" width="967" height="1113" frameX="-44" frameY="-355" frameWidth="1158" frameHeight="1559" />
+<SubTexture name="theo idle0001" x="0" y="3931" width="969" height="1118" frameX="-41" frameY="-346" frameWidth="1158" frameHeight="1559" />
+<SubTexture name="theo idle0002" x="3918" y="1204" width="968" height="1131" frameX="-43" frameY="-336" frameWidth="1158" frameHeight="1559" />
+<SubTexture name="theo idle0003" x="2939" y="1207" width="967" height="1131" frameX="-44" frameY="-337" frameWidth="1158" frameHeight="1559" />
+<SubTexture name="theo idle0004" x="2036" y="2734" width="969" height="1123" frameX="-41" frameY="-341" frameWidth="1158" frameHeight="1559" />
+<SubTexture name="theo idle0005" x="4906" y="0" width="968" height="1120" frameX="-43" frameY="-347" frameWidth="1158" frameHeight="1559" />
+<SubTexture name="theo left0000" x="2939" y="0" width="979" height="1207" frameX="-13" frameY="-262" frameWidth="1158" frameHeight="1559" />
+<SubTexture name="theo left0001" x="0" y="2734" width="994" height="1197" frameX="-5" frameY="-272" frameWidth="1158" frameHeight="1559" />
+<SubTexture name="theo left0002" x="3918" y="0" width="988" height="1204" frameX="-37" frameY="-267" frameWidth="1158" frameHeight="1559" />
+<SubTexture name="theo left0003" x="1000" y="1379" width="977" height="1212" frameX="-52" frameY="-265" frameWidth="1158" frameHeight="1559" />
+<SubTexture name="theo down0000" x="5874" y="0" width="997" height="945" frameX="-30" frameY="-539" frameWidth="1158" frameHeight="1559" />
+<SubTexture name="theo down0001" x="5874" y="945" width="989" height="944" frameX="-27" frameY="-545" frameWidth="1158" frameHeight="1559" />
+<SubTexture name="theo down0002" x="4077" y="3931" width="987" height="954" frameX="-28" frameY="-532" frameWidth="1158" frameHeight="1559" />
+<SubTexture name="theo down0003" x="3090" y="3931" width="987" height="981" frameX="-28" frameY="-505" frameWidth="1158" frameHeight="1559" />
+<SubTexture name="theo up0000" x="0" y="0" width="975" height="1379" frameX="-31" frameY="-75" frameWidth="1158" frameHeight="1559" />
+<SubTexture name="theo up0001" x="975" y="0" width="982" height="1370" frameX="-28" frameY="-86" frameWidth="1158" frameHeight="1559" />
+<SubTexture name="theo up0002" x="0" y="1379" width="1000" height="1355" frameX="-27" frameY="-99" frameWidth="1158" frameHeight="1559" />
+<SubTexture name="theo up0003" x="1957" y="0" width="982" height="1361" frameX="-27" frameY="-97" frameWidth="1158" frameHeight="1559" />
+<SubTexture name="theo right0000" x="2025" y="3931" width="1065" height="1106" frameX="-77" frameY="-337" frameWidth="1158" frameHeight="1559" />
+<SubTexture name="theo right0001" x="969" y="3931" width="1056" height="1112" frameX="-81" frameY="-334" frameWidth="1158" frameHeight="1559" />
+<SubTexture name="theo right0002" x="994" y="2734" width="1042" height="1132" frameX="-78" frameY="-321" frameWidth="1158" frameHeight="1559" />
+<SubTexture name="theo right0003" x="3005" y="2734" width="1038" height="1121" frameX="-65" frameY="-322" frameWidth="1158" frameHeight="1559" />
+</TextureAtlas>

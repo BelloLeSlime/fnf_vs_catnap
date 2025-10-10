@@ -1,0 +1,134 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				110,
+				150
+			],
+			"anim": "firstDeath",
+			"fps": 9,
+			"name": "rapperroo drop",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				110,
+				150
+			],
+			"anim": "deathLoop",
+			"fps": 9,
+			"name": "rapperroo drop",
+			"indices": [
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				110,
+				150
+			],
+			"anim": "deathConfirm",
+			"fps": 9,
+			"name": "rapperroo okay",
+			"indices": [
+				0,
+				1,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			]
+		},
+		{
+			"offsets": [
+				0,
+				150
+			],
+			"indices": [],
+			"fps": 9,
+			"anim": "idle",
+			"loop": false,
+			"name": "karaokeith idle"
+		},
+		{
+			"offsets": [
+				0,
+				150
+			],
+			"indices": [],
+			"fps": 10,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "karaokeith left"
+		},
+		{
+			"offsets": [
+				0,
+				150
+			],
+			"indices": [],
+			"fps": 10,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "karaokeith down"
+		},
+		{
+			"offsets": [
+				0,
+				150
+			],
+			"indices": [],
+			"fps": 10,
+			"anim": "singUP",
+			"loop": false,
+			"name": "karaokeith up"
+		},
+		{
+			"offsets": [
+				0,
+				150
+			],
+			"indices": [],
+			"fps": 10,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "karaokeith right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/rapperroo",
+	"position": [
+		-850,
+		-570
+	],
+	"healthicon": "rapperroo",
+	"flip_x": true,
+	"healthbar_colors": [
+		109,
+		173,
+		255
+	],
+	"camera_position": [
+		-700,
+		730
+	],
+	"sing_duration": 5,
+	"scale": 0.34
+}

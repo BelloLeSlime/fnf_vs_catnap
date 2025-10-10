@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="finalcat.png"><SubTexture name="finalcat idle0000" x="648" y="0" width="648" height="596" frameX="-274" frameY="-131" frameWidth="1286" frameHeight="730" />
+<SubTexture name="finalcat idle0001" x="0" y="598" width="648" height="594" frameX="-274" frameY="-128" frameWidth="1286" frameHeight="730" />
+<SubTexture name="finalcat idle0002" x="648" y="598" width="648" height="583" frameX="-269" frameY="-137" frameWidth="1286" frameHeight="730" />
+<SubTexture name="finalcat left0000" x="1296" y="0" width="649" height="592" frameX="-233" frameY="-129" frameWidth="1286" frameHeight="730" />
+<SubTexture name="finalcat left0001" x="0" y="1192" width="650" height="589" frameX="-250" frameY="-132" frameWidth="1286" frameHeight="730" />
+<SubTexture name="finalcat down0000" x="1945" y="0" width="648" height="557" frameX="-269" frameY="-164" frameWidth="1286" frameHeight="730" />
+<SubTexture name="finalcat down0001" x="650" y="1192" width="648" height="567" frameX="-269" frameY="-153" frameWidth="1286" frameHeight="730" />
+<SubTexture name="finalcat up0000" x="1945" y="557" width="633" height="548" frameX="-278" frameY="-173" frameWidth="1286" frameHeight="730" />
+<SubTexture name="finalcat up0001" x="1945" y="1105" width="633" height="531" frameX="-278" frameY="-190" frameWidth="1286" frameHeight="730" />
+<SubTexture name="finalcat right0000" x="0" y="0" width="648" height="598" frameX="-319" frameY="-123" frameWidth="1286" frameHeight="730" />
+<SubTexture name="finalcat right0001" x="1296" y="592" width="649" height="587" frameX="-314" frameY="-134" frameWidth="1286" frameHeight="730" />
+</TextureAtlas>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="hands.png"><SubTexture name="hands idle0000" x="1267" y="2636" width="1275" height="618" frameX="-7" frameY="-95" frameWidth="1286" frameHeight="730" />
+<SubTexture name="hands idle0001" x="0" y="2636" width="1267" height="623" frameX="-10" frameY="-82" frameWidth="1286" frameHeight="730" />
+<SubTexture name="hands idle0002" x="0" y="2006" width="1257" height="630" frameX="-16" frameY="-75" frameWidth="1286" frameHeight="730" />
+<SubTexture name="hands idle0003" x="1257" y="2006" width="1257" height="629" frameX="-18" frameY="-76" frameWidth="1286" frameHeight="730" />
+<SubTexture name="hands left0000" x="0" y="678" width="1256" height="665" frameX="-7" frameY="-44" frameWidth="1286" frameHeight="730" />
+<SubTexture name="hands left0001" x="0" y="1343" width="1260" height="663" frameX="-12" frameY="-49" frameWidth="1286" frameHeight="730" />
+<SubTexture name="hands down0000" x="3723" y="611" width="1268" height="608" frameX="-12" frameY="-122" frameWidth="1286" frameHeight="730" />
+<SubTexture name="hands down0001" x="3723" y="0" width="1275" height="611" frameX="-8" frameY="-113" frameWidth="1286" frameHeight="730" />
+<SubTexture name="hands up0000" x="2475" y="0" width="1248" height="635" frameX="-18" frameY="-46" frameWidth="1286" frameHeight="730" />
+<SubTexture name="hands up0001" x="2475" y="635" width="1245" height="633" frameX="-20" frameY="-53" frameWidth="1286" frameHeight="730" />
+<SubTexture name="hands right0000" x="0" y="0" width="1237" height="678" frameX="-49" frameY="-52" frameWidth="1286" frameHeight="730" />
+<SubTexture name="hands right0001" x="1237" y="0" width="1238" height="668" frameX="-42" frameY="-56" frameWidth="1286" frameHeight="730" />
+</TextureAtlas>

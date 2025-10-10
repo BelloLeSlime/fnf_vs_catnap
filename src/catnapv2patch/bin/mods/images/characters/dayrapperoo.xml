@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="dayrapperoo.png"><SubTexture name="dayrapperoo idle0000" x="5330" y="3244" width="1193" height="1576" frameX="-660" frameY="-635" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="dayrapperoo idle0001" x="6532" y="3212" width="1199" height="1601" frameX="-673" frameY="-610" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="dayrapperoo idle0002" x="5330" y="0" width="1202" height="1627" frameX="-689" frameY="-584" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="dayrapperoo idle0003" x="1232" y="3575" width="1202" height="1629" frameX="-693" frameY="-581" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="dayrapperoo left0000" x="1200" y="1877" width="1211" height="1678" frameX="-588" frameY="-533" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="dayrapperoo left0001" x="2411" y="1877" width="1221" height="1670" frameX="-604" frameY="-541" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="dayrapperoo down0000" x="1204" y="5226" width="1201" height="1490" frameX="-512" frameY="-720" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="dayrapperoo down0001" x="0" y="5226" width="1204" height="1536" frameX="-520" frameY="-675" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="dayrapperoo up0000" x="2906" y="0" width="1193" height="1706" frameX="-657" frameY="-505" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="dayrapperoo up0001" x="0" y="1877" width="1200" height="1698" frameX="-663" frameY="-513" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="dayrapperoo right0000" x="5330" y="1627" width="1198" height="1617" frameX="-760" frameY="-594" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="dayrapperoo right0001" x="4099" y="1654" width="1204" height="1631" frameX="-738" frameY="-580" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="dayrapperoo miss0000" x="2434" y="3575" width="1202" height="1629" frameX="-693" frameY="-581" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="dayrapperoo miss0001" x="3636" y="3575" width="1204" height="1628" frameX="-681" frameY="-583" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="dayrapperoo taunt0000" x="6532" y="0" width="1312" height="1609" frameX="-495" frameY="-602" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="dayrapperoo taunt0001" x="6532" y="1609" width="1309" height="1603" frameX="-520" frameY="-608" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="dayrapperoo paralyze0000" x="1571" y="0" width="1335" height="1802" frameX="-711" frameY="-415" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="dayrapperoo paralyze0001" x="0" y="0" width="1571" height="1877" frameX="-418" frameY="-340" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="dayrapperoo paralyze0002" x="4099" y="0" width="1231" height="1654" frameX="-670" frameY="-563" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="dayrapperoo paralyze0003" x="0" y="3575" width="1232" height="1651" frameX="-655" frameY="-566" frameWidth="2274" frameHeight="2255" />
+</TextureAtlas>

@@ -1,0 +1,100 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-450,
+				-265
+			],
+			"loop": false,
+			"fps": 20,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "catnap left"
+		},
+		{
+			"offsets": [
+				-450,
+				-265
+			],
+			"loop": false,
+			"fps": 20,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "catnap down"
+		},
+		{
+			"offsets": [
+				-450,
+				-265
+			],
+			"loop": false,
+			"fps": 20,
+			"anim": "singUP",
+			"indices": [],
+			"name": "catnap up"
+		},
+		{
+			"offsets": [
+				-450,
+				-265
+			],
+			"loop": false,
+			"fps": 20,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "catnap right"
+		},
+		{
+			"offsets": [
+				-450,
+				-265
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "smoke",
+			"indices": [],
+			"name": "catnap smoke"
+		},
+		{
+			"offsets": [
+				-450,
+				-265
+			],
+			"indices": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10
+			],
+			"fps": 17,
+			"anim": "idle",
+			"loop": false,
+			"name": "catnap idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/catnap",
+	"position": [
+		-850,
+		-570
+	],
+	"healthicon": "catnip",
+	"flip_x": false,
+	"healthbar_colors": [
+		115,
+		73,
+		170
+	],
+	"camera_position": [
+		730,
+		650
+	],
+	"sing_duration": 5,
+	"scale": 0.64
+}

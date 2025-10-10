@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="Menu_dogtv.png"><SubTexture name="Menu_dogtv idle0000" x="0" y="0" width="455" height="386" frameX="-372" frameY="0" frameWidth="1280" frameHeight="386" />
+<SubTexture name="Menu_dogtv idle0001" x="0" y="0" width="455" height="386" frameX="-372" frameY="0" frameWidth="1280" frameHeight="386" />
+<SubTexture name="Menu_dogtv idle0002" x="455" y="0" width="455" height="386" frameX="-372" frameY="0" frameWidth="1280" frameHeight="386" />
+<SubTexture name="Menu_dogtv idle0003" x="455" y="0" width="455" height="386" frameX="-372" frameY="0" frameWidth="1280" frameHeight="386" />
+<SubTexture name="Menu_dogtv idle0004" x="0" y="386" width="455" height="386" frameX="-372" frameY="0" frameWidth="1280" frameHeight="386" />
+<SubTexture name="Menu_dogtv idle0005" x="0" y="386" width="455" height="386" frameX="-372" frameY="0" frameWidth="1280" frameHeight="386" />
+<SubTexture name="Menu_dogtv idle0006" x="455" y="386" width="455" height="386" frameX="-372" frameY="0" frameWidth="1280" frameHeight="386" />
+<SubTexture name="Menu_dogtv idle0007" x="455" y="386" width="455" height="386" frameX="-372" frameY="0" frameWidth="1280" frameHeight="386" />
+</TextureAtlas>

@@ -1,0 +1,59 @@
+{
+	"storyName": "freeplay things",
+	"difficulties": "Hard",
+	"hideFreeplay": false,
+	"weekBackground": "catshit",
+	"weekBefore": "losttape",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": false,
+	"hideStoryMode": true,
+	"songs": [
+		[
+			"Joy Hour",
+			"catnap",
+			[
+				36,
+				0,
+				73
+			]
+		],
+		[
+			"Bootleg",
+			"plush",
+			[
+				146,
+				80,
+				233
+			]
+		],
+		[
+			"Melatonin",
+			"seventeen",
+			[
+				126,
+				20,
+				133
+			]
+		],
+		[
+			"Reject",
+			"lifeless",
+			[
+				40,
+				40,
+				40
+			]
+		]
+	],
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"hiddenUntilUnlocked": true,
+	"weekName": "The Extras"
+}

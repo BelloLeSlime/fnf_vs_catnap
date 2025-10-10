@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="wheelchair.png"><SubTexture name="wheelchair idle0000" x="0" y="0" width="622" height="739" frameX="-189" frameY="-195" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="wheelchair idle0001" x="0" y="0" width="622" height="739" frameX="-189" frameY="-195" frameWidth="1000" frameHeight="1000" />
+</TextureAtlas>

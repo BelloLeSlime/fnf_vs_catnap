@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="daydog.png"><SubTexture name="daydog idle0000" x="2712" y="839" width="586" height="832" frameX="-481" frameY="-497" frameWidth="1455" frameHeight="1346" />
+<SubTexture name="daydog idle0001" x="2132" y="0" width="580" height="851" frameX="-484" frameY="-479" frameWidth="1455" frameHeight="1346" />
+<SubTexture name="daydog idle0002" x="1481" y="1072" width="577" height="874" frameX="-469" frameY="-456" frameWidth="1455" frameHeight="1346" />
+<SubTexture name="daydog idle0003" x="912" y="1072" width="569" height="879" frameX="-466" frameY="-450" frameWidth="1455" frameHeight="1346" />
+<SubTexture name="daydog left0000" x="0" y="1072" width="912" height="899" frameX="-122" frameY="-431" frameWidth="1455" frameHeight="1346" />
+<SubTexture name="daydog left0001" x="1217" y="0" width="915" height="912" frameX="-132" frameY="-418" frameWidth="1455" frameHeight="1346" />
+<SubTexture name="daydog down0000" x="3331" y="736" width="960" height="717" frameX="-370" frameY="-618" frameWidth="1455" frameHeight="1346" />
+<SubTexture name="daydog down0001" x="3331" y="0" width="962" height="736" frameX="-361" frameY="-600" frameWidth="1455" frameHeight="1346" />
+<SubTexture name="daydog up0000" x="0" y="0" width="601" height="1072" frameX="-481" frameY="-206" frameWidth="1455" frameHeight="1346" />
+<SubTexture name="daydog up0001" x="601" y="0" width="616" height="1053" frameX="-468" frameY="-225" frameWidth="1455" frameHeight="1346" />
+<SubTexture name="daydog right0000" x="1316" y="1971" width="677" height="822" frameX="-488" frameY="-507" frameWidth="1455" frameHeight="1346" />
+<SubTexture name="daydog right0001" x="635" y="1971" width="681" height="824" frameX="-466" frameY="-506" frameWidth="1455" frameHeight="1346" />
+<SubTexture name="daydog wink0000" x="1993" y="1971" width="649" height="821" frameX="-416" frameY="-508" frameWidth="1455" frameHeight="1346" />
+<SubTexture name="daydog wink0001" x="0" y="1971" width="635" height="833" frameX="-417" frameY="-498" frameWidth="1455" frameHeight="1346" />
+<SubTexture name="daydog wink0002" x="2712" y="0" width="619" height="839" frameX="-424" frameY="-490" frameWidth="1455" frameHeight="1346" />
+</TextureAtlas>

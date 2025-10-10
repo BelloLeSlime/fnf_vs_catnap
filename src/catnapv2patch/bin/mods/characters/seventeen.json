@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-450,
+				-265
+			],
+			"anim": "idle",
+			"fps": 12,
+			"name": "seventeen idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-460,
+				-265
+			],
+			"anim": "singDOWN",
+			"fps": 12,
+			"name": "seventeen down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-450,
+				-265
+			],
+			"anim": "singUP",
+			"fps": 12,
+			"name": "seventeen up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-450,
+				-265
+			],
+			"anim": "singLEFT",
+			"fps": 12,
+			"name": "seventeen left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-450,
+				-265
+			],
+			"anim": "singRIGHT",
+			"fps": 12,
+			"name": "seventeen right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/seventeen",
+	"position": [
+		-690,
+		-470
+	],
+	"healthicon": "seventeen",
+	"flip_x": false,
+	"healthbar_colors": [
+		93,
+		72,
+		140
+	],
+	"camera_position": [
+		650,
+		600
+	],
+	"sing_duration": 5,
+	"scale": 0.6
+}

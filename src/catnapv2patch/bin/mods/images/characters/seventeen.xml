@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="seventeen.png"><SubTexture name="seventeen idle0000" x="3326" y="1045" width="808" height="1042" frameX="-172" frameY="-208" frameWidth="1097" frameHeight="1269" />
+<SubTexture name="seventeen idle0001" x="2505" y="1069" width="810" height="1050" frameX="-178" frameY="-200" frameWidth="1097" frameHeight="1269" />
+<SubTexture name="seventeen idle0002" x="2505" y="0" width="821" height="1069" frameX="-178" frameY="-181" frameWidth="1097" frameHeight="1269" />
+<SubTexture name="seventeen idle0003" x="1683" y="0" width="822" height="1074" frameX="-179" frameY="-177" frameWidth="1097" frameHeight="1269" />
+<SubTexture name="seventeen idle0004" x="0" y="1106" width="830" height="1073" frameX="-179" frameY="-178" frameWidth="1097" frameHeight="1269" />
+<SubTexture name="seventeen idle0005" x="830" y="1106" width="830" height="1073" frameX="-179" frameY="-178" frameWidth="1097" frameHeight="1269" />
+<SubTexture name="seventeen idle0006" x="1660" y="1106" width="786" height="1073" frameX="-179" frameY="-178" frameWidth="1097" frameHeight="1269" />
+<SubTexture name="seventeen left0000" x="3326" y="0" width="841" height="1045" frameX="-107" frameY="-205" frameWidth="1097" frameHeight="1269" />
+<SubTexture name="seventeen left0001" x="881" y="2179" width="817" height="1049" frameX="-111" frameY="-201" frameWidth="1097" frameHeight="1269" />
+<SubTexture name="seventeen down0000" x="4167" y="1000" width="856" height="992" frameX="-147" frameY="-259" frameWidth="1097" frameHeight="1269" />
+<SubTexture name="seventeen down0001" x="4167" y="0" width="865" height="1000" frameX="-147" frameY="-252" frameWidth="1097" frameHeight="1269" />
+<SubTexture name="seventeen right0000" x="0" y="2179" width="881" height="1053" frameX="-188" frameY="-197" frameWidth="1097" frameHeight="1269" />
+<SubTexture name="seventeen right0001" x="1698" y="2179" width="880" height="1048" frameX="-186" frameY="-202" frameWidth="1097" frameHeight="1269" />
+<SubTexture name="seventeen up0000" x="0" y="0" width="842" height="1106" frameX="-182" frameY="-144" frameWidth="1097" frameHeight="1269" />
+<SubTexture name="seventeen up0001" x="842" y="0" width="841" height="1090" frameX="-175" frameY="-160" frameWidth="1097" frameHeight="1269" />
+</TextureAtlas>

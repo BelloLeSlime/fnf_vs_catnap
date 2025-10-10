@@ -1,0 +1,11 @@
+{
+	"confirm_anim": "Menu_dogtv",
+	"idle_anim": "Menu_dogtv",
+	"position": [
+		455,
+		14
+	],
+	"scale": 1,
+	"image": "Menu_dogtv",
+	"flipX": false
+}

@@ -1,0 +1,111 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				-650
+			],
+			"loop": false,
+			"fps": 11,
+			"anim": "idle",
+			"indices": [],
+			"name": "hands idle"
+		},
+		{
+			"offsets": [
+				0,
+				-650
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "hands down"
+		},
+		{
+			"offsets": [
+				0,
+				-650
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "hands left"
+		},
+		{
+			"offsets": [
+				0,
+				-650
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singUP",
+			"indices": [],
+			"name": "hands up"
+		},
+		{
+			"offsets": [
+				0,
+				-650
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "hands right"
+		},
+		{
+			"offsets": [
+				0,
+				-1700
+			],
+			"indices": [],
+			"fps": 3,
+			"anim": "firstDeath",
+			"loop": false,
+			"name": "hands idle"
+		},
+		{
+			"offsets": [
+				0,
+				-1700
+			],
+			"indices": [],
+			"fps": 3,
+			"anim": "deathConfirm",
+			"loop": true,
+			"name": "hands idle"
+		},
+		{
+			"offsets": [
+				0,
+				-1700
+			],
+			"indices": [],
+			"fps": 3,
+			"anim": "deathLoop",
+			"loop": true,
+			"name": "hands idle"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/hands",
+	"position": [
+		-1275,
+		-330
+	],
+	"healthicon": "gasbf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		130,
+		310
+	],
+	"sing_duration": 5,
+	"scale": 1.39
+}

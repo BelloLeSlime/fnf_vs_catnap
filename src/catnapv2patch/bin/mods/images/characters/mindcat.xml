@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="mindcat.png"><SubTexture name="mindcat idle0000" x="1650" y="2125" width="839" height="865" frameX="-273" frameY="-452" frameWidth="1455" frameHeight="1346" />
+<SubTexture name="mindcat idle0001" x="814" y="2125" width="836" height="887" frameX="-277" frameY="-431" frameWidth="1455" frameHeight="1346" />
+<SubTexture name="mindcat idle0002" x="0" y="2125" width="814" height="934" frameX="-301" frameY="-383" frameWidth="1455" frameHeight="1346" />
+<SubTexture name="mindcat idle0003" x="2537" y="992" width="798" height="955" frameX="-318" frameY="-361" frameWidth="1455" frameHeight="1346" />
+<SubTexture name="mindcat left0000" x="2537" y="0" width="933" height="992" frameX="-129" frameY="-325" frameWidth="1455" frameHeight="1346" />
+<SubTexture name="mindcat left0001" x="824" y="1103" width="904" height="993" frameX="-161" frameY="-325" frameWidth="1455" frameHeight="1346" />
+<SubTexture name="mindcat down0000" x="3470" y="0" width="904" height="790" frameX="-427" frameY="-527" frameWidth="1455" frameHeight="1346" />
+<SubTexture name="mindcat down0001" x="2489" y="2125" width="891" height="810" frameX="-443" frameY="-507" frameWidth="1455" frameHeight="1346" />
+<SubTexture name="mindcat up0000" x="0" y="0" width="623" height="1103" frameX="-447" frameY="-215" frameWidth="1455" frameHeight="1346" />
+<SubTexture name="mindcat up0001" x="623" y="0" width="633" height="1092" frameX="-437" frameY="-227" frameWidth="1455" frameHeight="1346" />
+<SubTexture name="mindcat right0000" x="1723" y="0" width="814" height="1039" frameX="-392" frameY="-277" frameWidth="1455" frameHeight="1346" />
+<SubTexture name="mindcat right0001" x="0" y="1103" width="824" height="1022" frameX="-381" frameY="-295" frameWidth="1455" frameHeight="1346" />
+<SubTexture name="mindcat miss0000" x="0" y="3059" width="954" height="680" frameX="-379" frameY="-637" frameWidth="1455" frameHeight="1346" />
+<SubTexture name="mindcat miss0001" x="954" y="3059" width="947" height="680" frameX="-386" frameY="-637" frameWidth="1455" frameHeight="1346" />
+<SubTexture name="mindcat stare0000" x="1256" y="0" width="467" height="1040" frameX="-452" frameY="-253" frameWidth="1455" frameHeight="1346" />
+<SubTexture name="mindcat stare0001" x="1256" y="0" width="467" height="1040" frameX="-452" frameY="-253" frameWidth="1455" frameHeight="1346" />
+</TextureAtlas>

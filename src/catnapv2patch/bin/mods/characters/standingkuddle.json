@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-355,
+				-280
+			],
+			"anim": "singLEFT",
+			"fps": 11,
+			"name": "standingkuddle left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-355,
+				-280
+			],
+			"anim": "singDOWN",
+			"fps": 11,
+			"name": "standingkuddle down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-355,
+				-280
+			],
+			"anim": "singUP",
+			"fps": 11,
+			"name": "standingkuddle up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-355,
+				-280
+			],
+			"anim": "singRIGHT",
+			"fps": 11,
+			"name": "standingkuddle right",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-355,
+				-280
+			],
+			"indices": [],
+			"fps": 5,
+			"anim": "idle",
+			"loop": false,
+			"name": "standingkuddle idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/standingkuddle",
+	"position": [
+		-200,
+		-550
+	],
+	"healthicon": "kuddle",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		0,
+		0
+	],
+	"camera_position": [
+		250,
+		350
+	],
+	"sing_duration": 4.5,
+	"scale": 0.89
+}

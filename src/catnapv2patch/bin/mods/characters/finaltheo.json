@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-355,
+				-280
+			],
+			"loop": true,
+			"fps": 8,
+			"anim": "idle",
+			"indices": [],
+			"name": "finaltheo idle"
+		},
+		{
+			"offsets": [
+				-355,
+				-280
+			],
+			"loop": false,
+			"fps": 17,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "finaltheo left"
+		},
+		{
+			"offsets": [
+				-345,
+				-290
+			],
+			"loop": false,
+			"fps": 17,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "finaltheo down"
+		},
+		{
+			"offsets": [
+				-355,
+				-280
+			],
+			"loop": false,
+			"fps": 17,
+			"anim": "singUP",
+			"indices": [],
+			"name": "finaltheo up"
+		},
+		{
+			"offsets": [
+				-355,
+				-280
+			],
+			"loop": false,
+			"fps": 17,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "finaltheo right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/finaltheo",
+	"position": [
+		-80,
+		-550
+	],
+	"healthicon": "smoke",
+	"flip_x": false,
+	"healthbar_colors": [
+		250,
+		0,
+		-2147483648
+	],
+	"camera_position": [
+		145,
+		350
+	],
+	"sing_duration": 4.5,
+	"scale": 1.09
+}

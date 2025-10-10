@@ -1,0 +1,11 @@
+{
+	"idle_anim": "Menu_cattv idle",
+	"confirm_anim": "Menu_cattv idle",
+	"position": [
+		455,
+		14
+	],
+	"scale": 1,
+	"flipX": false,
+	"image": "Menu_cattv"
+}

@@ -1,0 +1,103 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-450,
+				-265
+			],
+			"indices": [],
+			"fps": 10,
+			"anim": "idle",
+			"loop": false,
+			"name": "daydog idle"
+		},
+		{
+			"offsets": [
+				-450,
+				-265
+			],
+			"indices": [],
+			"fps": 10,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "daydog left"
+		},
+		{
+			"offsets": [
+				-450,
+				-265
+			],
+			"indices": [],
+			"fps": 10,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "daydog down"
+		},
+		{
+			"offsets": [
+				-450,
+				-265
+			],
+			"indices": [],
+			"fps": 10,
+			"anim": "singUP",
+			"loop": false,
+			"name": "daydog up"
+		},
+		{
+			"offsets": [
+				-450,
+				-265
+			],
+			"indices": [],
+			"fps": 10,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "daydog right"
+		},
+		{
+			"offsets": [
+				-450,
+				-265
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"fps": 8,
+			"anim": "taunt",
+			"loop": false,
+			"name": "daydog wink"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/daydog",
+	"position": [
+		-850,
+		-570
+	],
+	"healthicon": "dogday",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		188,
+		45
+	],
+	"camera_position": [
+		730,
+		650
+	],
+	"sing_duration": 5,
+	"scale": 0.64
+}

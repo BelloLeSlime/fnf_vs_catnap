@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="daybear.png"><SubTexture name="daybear idle0000" x="0" y="0" width="251" height="355" frameX="-102" frameY="-29" frameWidth="429" frameHeight="392" />
+<SubTexture name="daybear idle0001" x="251" y="0" width="249" height="354" frameX="-103" frameY="-30" frameWidth="429" frameHeight="392" />
+</TextureAtlas>

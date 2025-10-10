@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				-510,
+				-50
+			],
+			"anim": "idle",
+			"fps": 6,
+			"name": "theo idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-510,
+				-50
+			],
+			"loop": false,
+			"fps": 18,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "theo left"
+		},
+		{
+			"offsets": [
+				-510,
+				-50
+			],
+			"loop": false,
+			"fps": 18,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "theo down"
+		},
+		{
+			"offsets": [
+				-510,
+				-50
+			],
+			"loop": false,
+			"fps": 18,
+			"anim": "singUP",
+			"indices": [],
+			"name": "theo up"
+		},
+		{
+			"offsets": [
+				-510,
+				-50
+			],
+			"loop": false,
+			"fps": 18,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "theo right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/theo",
+	"position": [
+		-850,
+		-650
+	],
+	"healthicon": "smoke",
+	"flip_x": false,
+	"healthbar_colors": [
+		250,
+		0,
+		45
+	],
+	"camera_position": [
+		880,
+		300
+	],
+	"sing_duration": 6,
+	"scale": 0.95
+}

@@ -1,0 +1,223 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				150
+			],
+			"loop": false,
+			"fps": 9,
+			"anim": "idle",
+			"indices": [],
+			"name": "dayrapperoo idle"
+		},
+		{
+			"offsets": [
+				0,
+				150
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "dayrapperoo left"
+		},
+		{
+			"offsets": [
+				0,
+				150
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "dayrapperoo down"
+		},
+		{
+			"offsets": [
+				0,
+				150
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "singUP",
+			"indices": [],
+			"name": "dayrapperoo up"
+		},
+		{
+			"offsets": [
+				0,
+				150
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "dayrapperoo right"
+		},
+		{
+			"offsets": [
+				0,
+				150
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "dayrapperoo miss"
+		},
+		{
+			"offsets": [
+				0,
+				150
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "dayrapperoo miss"
+		},
+		{
+			"offsets": [
+				0,
+				150
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "dayrapperoo miss"
+		},
+		{
+			"offsets": [
+				0,
+				150
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "dayrapperoo miss"
+		},
+		{
+			"offsets": [
+				0,
+				150
+			],
+			"loop": true,
+			"fps": 9,
+			"anim": "deathLoop",
+			"indices": [
+				2,
+				3,
+				2,
+				3,
+				2,
+				3,
+				2,
+				3,
+				2,
+				3,
+				2,
+				3,
+				2,
+				3,
+				2,
+				3
+			],
+			"name": "dayrapperoo paralyze"
+		},
+		{
+			"offsets": [
+				0,
+				150
+			],
+			"loop": true,
+			"fps": 9,
+			"anim": "deathConfirm",
+			"indices": [
+				2,
+				3,
+				2,
+				3,
+				2,
+				3,
+				2,
+				3,
+				2,
+				3,
+				2,
+				3,
+				2,
+				3,
+				2,
+				3
+			],
+			"name": "dayrapperoo paralyze"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				150
+			],
+			"anim": "hey",
+			"fps": 9,
+			"name": "dayrapperoo taunt",
+			"indices": [
+				0,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1
+			]
+		},
+		{
+			"offsets": [
+				0,
+				150
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				2,
+				3,
+				2
+			],
+			"fps": 9,
+			"anim": "firstDeath",
+			"loop": false,
+			"name": "dayrapperoo paralyze"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/dayrapperoo",
+	"position": [
+		-850,
+		-570
+	],
+	"healthicon": "dayrapperroo",
+	"flip_x": true,
+	"healthbar_colors": [
+		109,
+		173,
+		255
+	],
+	"camera_position": [
+		-700,
+		730
+	],
+	"sing_duration": 5,
+	"scale": 0.34
+}

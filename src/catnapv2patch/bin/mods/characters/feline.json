@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-355,
+				-290
+			],
+			"loop": false,
+			"fps": 11,
+			"anim": "idle",
+			"indices": [],
+			"name": "nappycat idle"
+		},
+		{
+			"offsets": [
+				-355,
+				-280
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "nappycat left"
+		},
+		{
+			"offsets": [
+				-355,
+				-280
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "nappycat down"
+		},
+		{
+			"offsets": [
+				-355,
+				-280
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singUP",
+			"indices": [],
+			"name": "nappycat up"
+		},
+		{
+			"offsets": [
+				-365,
+				-280
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "nappycat right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/nappycat",
+	"position": [
+		-280,
+		-450
+	],
+	"healthicon": "catnap",
+	"flip_x": false,
+	"healthbar_colors": [
+		39,
+		27,
+		56
+	],
+	"camera_position": [
+		200,
+		400
+	],
+	"sing_duration": 5,
+	"scale": 0.99
+}

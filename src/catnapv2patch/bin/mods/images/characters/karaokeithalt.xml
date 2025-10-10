@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="karaokeithalt.png"><SubTexture name="karaokeithalt idle0000" x="1204" y="3401" width="1200" height="1474" frameX="-512" frameY="-735" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="karaokeithalt idle0001" x="4815" y="1519" width="1198" height="1507" frameX="-528" frameY="-702" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="karaokeithalt idle0002" x="3609" y="1615" width="1202" height="1523" frameX="-548" frameY="-686" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="karaokeithalt idle0003" x="4815" y="0" width="1202" height="1519" frameX="-559" frameY="-689" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="karaokeithalt up0000" x="0" y="0" width="1200" height="1773" frameX="-670" frameY="-432" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="karaokeithalt up0001" x="1200" y="0" width="1204" height="1744" frameX="-652" frameY="-462" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="karaokeithalt right0000" x="0" y="1773" width="1663" height="1628" frameX="-496" frameY="-581" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="karaokeithalt right0001" x="1663" y="1773" width="1660" height="1626" frameX="-481" frameY="-583" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="karaokeithalt miss0000" x="2404" y="3401" width="1200" height="1473" frameX="-537" frameY="-736" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="karaokeithalt miss0001" x="0" y="3401" width="1204" height="1510" frameX="-547" frameY="-699" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="karaokeithalt left0000" x="3609" y="0" width="1206" height="1615" frameX="-364" frameY="-594" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="karaokeithalt left0001" x="2404" y="0" width="1205" height="1639" frameX="-399" frameY="-571" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="karaokeithalt down0000" x="4807" y="3401" width="1197" height="1360" frameX="-505" frameY="-849" frameWidth="2274" frameHeight="2255" />
+<SubTexture name="karaokeithalt down0001" x="3604" y="3401" width="1203" height="1406" frameX="-514" frameY="-804" frameWidth="2274" frameHeight="2255" />
+</TextureAtlas>

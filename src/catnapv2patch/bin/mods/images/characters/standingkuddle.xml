@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="standingkuddle.png"><SubTexture name="standingkuddle idle0000" x="2413" y="1060" width="798" height="1058" frameX="-42" frameY="-88" frameWidth="872" frameHeight="1155" />
+<SubTexture name="standingkuddle idle0001" x="3235" y="0" width="797" height="1047" frameX="-42" frameY="-99" frameWidth="872" frameHeight="1155" />
+<SubTexture name="standingkuddle idle0002" x="795" y="1136" width="799" height="1068" frameX="-40" frameY="-79" frameWidth="872" frameHeight="1155" />
+<SubTexture name="standingkuddle idle0003" x="0" y="1136" width="795" height="1077" frameX="-42" frameY="-68" frameWidth="872" frameHeight="1155" />
+<SubTexture name="standingkuddle idle0004" x="1618" y="0" width="795" height="1079" frameX="-42" frameY="-66" frameWidth="872" frameHeight="1155" />
+<SubTexture name="standingkuddle left0000" x="1594" y="1136" width="794" height="1061" frameX="-24" frameY="-86" frameWidth="872" frameHeight="1155" />
+<SubTexture name="standingkuddle left0001" x="3235" y="1047" width="796" height="1037" frameX="-25" frameY="-110" frameWidth="872" frameHeight="1155" />
+<SubTexture name="standingkuddle down0000" x="1600" y="2213" width="815" height="926" frameX="-29" frameY="-220" frameWidth="872" frameHeight="1155" />
+<SubTexture name="standingkuddle down0001" x="802" y="2213" width="798" height="962" frameX="-36" frameY="-185" frameWidth="872" frameHeight="1155" />
+<SubTexture name="standingkuddle up0000" x="0" y="0" width="794" height="1136" frameX="-41" frameY="-14" frameWidth="872" frameHeight="1155" />
+<SubTexture name="standingkuddle up0001" x="794" y="0" width="824" height="1117" frameX="-26" frameY="-33" frameWidth="872" frameHeight="1155" />
+<SubTexture name="standingkuddle right0000" x="2413" y="0" width="822" height="1060" frameX="-50" frameY="-86" frameWidth="872" frameHeight="1155" />
+<SubTexture name="standingkuddle right0001" x="0" y="2213" width="802" height="1039" frameX="-47" frameY="-108" frameWidth="872" frameHeight="1155" />
+</TextureAtlas>

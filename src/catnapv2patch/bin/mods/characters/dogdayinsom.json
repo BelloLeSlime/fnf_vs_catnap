@@ -1,0 +1,39 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				150
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3
+			],
+			"fps": 10,
+			"anim": "idle",
+			"loop": false,
+			"name": "dogdayinsom idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/dogdayinsom",
+	"position": [
+		100,
+		200
+	],
+	"healthicon": "face",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		133,
+		0
+	],
+	"camera_position": [
+		-150,
+		30
+	],
+	"sing_duration": 5,
+	"scale": 1
+}

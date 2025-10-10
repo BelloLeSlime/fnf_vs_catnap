@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="blackcat.png"><SubTexture name="monstercat idle0000" x="3149" y="0" width="856" height="1387" frameX="-143" frameY="-228" frameWidth="1250" frameHeight="1628" />
+<SubTexture name="monstercat idle0001" x="1594" y="1556" width="831" height="1393" frameX="-159" frameY="-222" frameWidth="1250" frameHeight="1628" />
+<SubTexture name="monstercat idle0002" x="788" y="1556" width="806" height="1404" frameX="-177" frameY="-212" frameWidth="1250" frameHeight="1628" />
+<SubTexture name="monstercat idle0003" x="0" y="1556" width="788" height="1406" frameX="-186" frameY="-208" frameWidth="1250" frameHeight="1628" />
+<SubTexture name="monstercat left0000" x="1123" y="2962" width="1181" height="1342" frameX="-51" frameY="-272" frameWidth="1250" frameHeight="1628" />
+<SubTexture name="monstercat left0001" x="2304" y="2962" width="1162" height="1329" frameX="-76" frameY="-285" frameWidth="1250" frameHeight="1628" />
+<SubTexture name="monstercat left0002" x="3466" y="2962" width="1158" height="1305" frameX="-84" frameY="-309" frameWidth="1250" frameHeight="1628" />
+<SubTexture name="monstercat down0000" x="5116" y="2073" width="1178" height="1033" frameX="-22" frameY="-582" frameWidth="1250" frameHeight="1628" />
+<SubTexture name="monstercat down0001" x="5116" y="1040" width="1187" height="1033" frameX="-15" frameY="-582" frameWidth="1250" frameHeight="1628" />
+<SubTexture name="monstercat down0002" x="5116" y="0" width="1189" height="1040" frameX="-14" frameY="-574" frameWidth="1250" frameHeight="1628" />
+<SubTexture name="monstercat up0000" x="0" y="0" width="1023" height="1556" frameX="-46" frameY="-59" frameWidth="1250" frameHeight="1628" />
+<SubTexture name="monstercat up0001" x="1023" y="0" width="1060" height="1554" frameX="-14" frameY="-62" frameWidth="1250" frameHeight="1628" />
+<SubTexture name="monstercat up0002" x="2083" y="0" width="1066" height="1535" frameX="-9" frameY="-81" frameWidth="1250" frameHeight="1628" />
+<SubTexture name="monstercat right0000" x="4005" y="1366" width="1103" height="1352" frameX="-126" frameY="-259" frameWidth="1250" frameHeight="1628" />
+<SubTexture name="monstercat right0001" x="0" y="2962" width="1123" height="1355" frameX="-86" frameY="-256" frameWidth="1250" frameHeight="1628" />
+<SubTexture name="monstercat right0002" x="4005" y="0" width="1111" height="1366" frameX="-82" frameY="-244" frameWidth="1250" frameHeight="1628" />
+</TextureAtlas>

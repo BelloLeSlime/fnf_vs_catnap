@@ -1,0 +1,50 @@
+{
+	"storyName": "The Lost Tape...",
+	"difficulties": "Hard",
+	"hideFreeplay": false,
+	"weekBackground": "catshit",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"cattv",
+		""
+	],
+	"songs": [
+		[
+			"Soporific",
+			"catnip",
+			[
+				46,
+				20,
+				93
+			]
+		],
+		[
+			"Sour Nightmares",
+			"catnip",
+			[
+				46,
+				20,
+				73
+			]
+		],
+		[
+			"Insomniac",
+			"cat",
+			[
+				26,
+				0,
+				53
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "The Forgotten Episode",
+	"hiddenUntilUnlocked": false
+}

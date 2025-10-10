@@ -1,0 +1,32 @@
+{
+	"songs": [
+		[
+			"Doggone Happy",
+			"dogday",
+			[
+				255,
+				165,
+				83
+			]
+		]
+	],
+	"hiddenUntilUnlocked": true,
+	"hideFreeplay": false,
+	"weekBackground": "catshit",
+	"difficulties": "Hard",
+	"weekCharacters": [
+		"",
+		"dogtv",
+		""
+	],
+	"storyName": "The Recovered Tape...",
+	"weekName": "The Recovered Episode",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": false,
+	"weekBefore": "losttape",
+	"startUnlocked": false
+}

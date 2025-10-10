@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-510,
+				-50
+			],
+			"anim": "idle",
+			"fps": 10,
+			"name": "monstercat idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-370,
+				-30
+			],
+			"anim": "singLEFT",
+			"fps": 10,
+			"name": "monstercat left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-510,
+				-50
+			],
+			"anim": "singDOWN",
+			"fps": 10,
+			"name": "monstercat down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-510,
+				-50
+			],
+			"anim": "singUP",
+			"fps": 10,
+			"name": "monstercat up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-620,
+				-40
+			],
+			"anim": "singRIGHT",
+			"fps": 10,
+			"name": "monstercat right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/blackcat",
+	"position": [
+		-850,
+		-570
+	],
+	"healthicon": "cat",
+	"flip_x": false,
+	"healthbar_colors": [
+		70,
+		28,
+		125
+	],
+	"camera_position": [
+		720,
+		440
+	],
+	"sing_duration": 5,
+	"scale": 0.65
+}

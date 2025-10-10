@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="dogdayinsom.png"><SubTexture name="dogdayinsom idle0000" x="782" y="0" width="406" height="281" frameX="-26" frameY="-159" frameWidth="512" frameHeight="512" />
+<SubTexture name="dogdayinsom idle0001" x="0" y="297" width="396" height="285" frameX="-31" frameY="-155" frameWidth="512" frameHeight="512" />
+<SubTexture name="dogdayinsom idle0002" x="389" y="0" width="393" height="294" frameX="-33" frameY="-146" frameWidth="512" frameHeight="512" />
+<SubTexture name="dogdayinsom idle0003" x="0" y="0" width="389" height="297" frameX="-33" frameY="-143" frameWidth="512" frameHeight="512" />
+<SubTexture name="dogdayinsom idle0004" x="0" y="0" width="389" height="297" frameX="-33" frameY="-143" frameWidth="512" frameHeight="512" />
+<SubTexture name="dogdayinsom idle0005" x="0" y="0" width="389" height="297" frameX="-33" frameY="-143" frameWidth="512" frameHeight="512" />
+<SubTexture name="dogdayinsom idle0006" x="0" y="0" width="389" height="297" frameX="-33" frameY="-143" frameWidth="512" frameHeight="512" />
+</TextureAtlas>

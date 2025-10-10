@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				-300
+			],
+			"loop": false,
+			"fps": 11,
+			"anim": "idle",
+			"indices": [],
+			"name": "hands idle"
+		},
+		{
+			"offsets": [
+				0,
+				-300
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "hands down"
+		},
+		{
+			"offsets": [
+				0,
+				-300
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "hands left"
+		},
+		{
+			"offsets": [
+				0,
+				-300
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singUP",
+			"indices": [],
+			"name": "hands up"
+		},
+		{
+			"offsets": [
+				0,
+				-300
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "hands right"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/hands",
+	"position": [
+		-725,
+		-2330
+	],
+	"healthicon": "boypov",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		130,
+		2180
+	],
+	"sing_duration": 5,
+	"scale": 1.39
+}
