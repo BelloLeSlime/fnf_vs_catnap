@@ -4,8 +4,9 @@ from fnf_images import *
 from ion import *
 from ion import keydown as kd
 from time import *
+import math
 
-def display_image(image_mat, x, y, target_w):
+"""def display_image(image_mat, x, y, target_w):
     h = len(image_mat)
     w = len(image_mat[0])
 
@@ -53,9 +54,97 @@ def display_image(image_mat, x, y, target_w):
                 )
                 current_color = pixel
                 run_start = i
+                run_length = 1"""
+
+def display_image(image_mat, x, y, target_w, x_off=0, y_off=0, w_off=None, h_off=None):
+    """
+    Affiche l'image image_mat à (x, y) avec largeur cible target_w,
+    mais ne dessine que la partie qui se trouve à l'intérieur de la zone visible
+    du canvas définie par (x_off, y_off, w_off, h_off).
+    """
+
+    h = len(image_mat)
+    w = len(image_mat[0])
+    ratio = target_w / w
+    scale_x = scale_y = ratio
+
+    # Par défaut, la zone visible = tout l’écran
+    if w_off is None:
+        w_off = 320
+    if h_off is None:
+        h_off = 240
+
+    # Limites visibles dans les coordonnées écran
+    x_min = x_off
+    y_min = y_off
+    x_max = x_off + w_off
+    y_max = y_off + h_off
+
+    for j, row in enumerate(image_mat):
+        # coordonnée Y réelle sur le canvas
+        screen_y = int(y + j * scale_y)
+        next_y = screen_y + int(scale_y)
+
+        # Ignore si la ligne est hors de la zone visible
+        if next_y < y_min or screen_y > y_max:
+            continue
+
+        current_color = None
+        run_start = None
+        run_length = 0
+
+        for i, pixel in enumerate(row + [[-1, -1, -1]]):  # pixel sentinelle
+            if pixel == -1:
+                if current_color is not None:
+                    r, g, b = current_color
+                    screen_x = int(x + run_start * scale_x)
+                    next_x = screen_x + int(run_length * scale_x)
+
+                    # On clip sur les bornes visibles
+                    clip_x1 = max(screen_x, x_min)
+                    clip_x2 = min(next_x, x_max)
+
+                    if clip_x2 > clip_x1 and next_y > y_min and screen_y < y_max:
+                        fill_rect(
+                            clip_x1,
+                            max(screen_y, y_min),
+                            clip_x2 - clip_x1,
+                            min(next_y, y_max) - max(screen_y, y_min),
+                            color(r, g, b)
+                        )
+
+                    current_color = None
+                    run_length = 0
+                continue
+
+            if current_color is None:
+                current_color = pixel
+                run_start = i
+                run_length = 1
+            elif pixel == current_color:
+                run_length += 1
+            else:
+                r, g, b = current_color
+                screen_x = int(x + run_start * scale_x)
+                next_x = screen_x + int(run_length * scale_x)
+
+                clip_x1 = max(screen_x, x_min)
+                clip_x2 = min(next_x, x_max)
+
+                if clip_x2 > clip_x1 and next_y > y_min and screen_y < y_max:
+                    fill_rect(
+                        clip_x1,
+                        max(screen_y, y_min),
+                        clip_x2 - clip_x1,
+                        min(next_y, y_max) - max(screen_y, y_min),
+                        color(int(r), int(g), int(b))
+                    )
+
+                current_color = pixel
+                run_start = i
                 run_length = 1
 
-keys = [KEY_LEFT, KEY_DOWN, KEY_UP, KEY_RIGHT, KEY_OK]
+keys = [KEY_LEFT, KEY_DOWN, KEY_UP, KEY_RIGHT, KEY_OK, KEY_BACKSPACE]
 prev_keys = [False] * len(keys)
 
 def get_key_just_pressed():
@@ -91,6 +180,8 @@ def game():
     catnap_pose = c_idle
     catnap_cooldown = 0
     last_catnap_pose = c_idle
+    display_image(bg_soporific, 0, 0, 320)
+    display_image(fg_soporific, 0, 0, 320)
 
     while True:
         s = monotonic()
@@ -107,8 +198,8 @@ def game():
             rapperroo_image = r_right
         else:
             rapperroo_image = r_idle
-        if turn == 0:
-            display_image(bg_soporific,0,0,320)
+
+        display_image(bg_soporific, 0, 0, 320, 170, 30, 80, 20)
 
         if kd(KEY_LEFT):
             display_image(a_c_left, 170, 30, 20)
@@ -127,9 +218,13 @@ def game():
         else:
             display_image(a_g_right, 230, 30, 20)
 
+        display_image(bg_soporific, 0, 0, 320, 180, 130, 60, 80)
         display_image(rapperroo_image, x, y, w)
+
+        display_image(bg_soporific, 0, 0, 320, 50, 130, 60, 80)
         display_image(catnap_pose,50,y,w)
 
+        display_image(bg_soporific, 0, 0, 320, 40, 30, 80, 20)
         display_image(a_g_left, 40, 30, 20)
         display_image(a_g_down, 60, 30, 20)
         display_image(a_g_up, 80, 30, 20)
@@ -138,7 +233,7 @@ def game():
         fill_rect(80,200,160,9,'black')
 
         win_x = int((win /100) * 156)
-        lose_x = int(((100 - win) / 100) * 156)
+        lose_x = 156-win_x
 
         fill_rect(82,202,lose_x,5,'purple')
         fill_rect(238-win_x,202,win_x,5,'cyan')
@@ -212,6 +307,9 @@ def game():
 
 
             if (not arrow_image == None) and note_visible:
+                display_image(bg_soporific, 0, 0, 320, note_x, int(note_y) + speed, 20, 20)
+                if note_y + speed >= 200:
+                    display_image(fg_soporific, 0, 0, 320, note_x, int(note_y) + speed, 20, 20)
                 display_image(arrow_image,note_x,note_y,20)
 
         catnap_pose = c_idle
@@ -243,6 +341,9 @@ def game():
 
 
             if arrow_image is not None and note_y >= 30:
+                display_image(bg_soporific, 0, 0, 320, note_x, int(note_y) + speed, 20, 20)
+                if note_y + speed >= 200:
+                    display_image(fg_soporific, 0, 0, 320, note_x, int(note_y) + speed, 20, 20)
                 display_image(arrow_image,note_x,note_y,20)
 
             if note_y <= 30 and note_y >= 30 - int(speed/2):
@@ -262,14 +363,13 @@ def game():
             if catnap_cooldown <= 0:
                 catnap_cooldown = 0
 
-        display_image(fg_soporific,0,0,320)
 
-        turn += 1
-        if turn == 1:
-            turn = 0
+
         delta = monotonic()-s
         if not delta > 0.05:
             sleep(0.05-delta)
+        else:
+            print("Performance issue !")
 
 def menu(menu_name = "main"):
     menu = menu_name
@@ -302,7 +402,7 @@ def menu(menu_name = "main"):
             if jp[4]:
                 menu = "mode"
         elif menu == "mode":
-            display_image(bg_menu,0,0,320)
+            display_image(bg_menu,-20,0 - (index_cursor * 5),360)
             if jp[1]:
                 index_cursor += 1
             if jp[2]:
@@ -325,7 +425,7 @@ def menu(menu_name = "main"):
                     menu = "freeplay"
 
         elif menu == "freeplay":
-            display_image(bg_menu, 0, 0, 320)
+            display_image(bg_menu, -20, 0 - (index_cursor * 5), 360)
             if jp[1]:
                 index_cursor += 1
             if jp[2]:
@@ -345,6 +445,9 @@ def menu(menu_name = "main"):
             if jp[4]:
                 if index_cursor == 0:
                     game()
+            if jp[5]:
+                index_cursor = 0
+                menu = "mode"
 
         delta = monotonic() - s
         if delta < 0.05:
@@ -357,3 +460,4 @@ def menu(menu_name = "main"):
 
 
 menu("main")
+display_image(bg_soporific,0,0,320,100,100,100,100)
