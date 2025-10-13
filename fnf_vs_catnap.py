@@ -4,57 +4,7 @@ from fnf_images import *
 from ion import *
 from ion import keydown as kd
 from time import *
-import math
-
-"""def display_image(image_mat, x, y, target_w):
-    h = len(image_mat)
-    w = len(image_mat[0])
-
-    ratio = target_w / w
-    scale_x = scale_y = ratio
-
-    for j, row in enumerate(image_mat):
-        current_color = None
-        run_start = None
-        run_length = 0
-
-        for i, pixel in enumerate(row + [[-1, -1, -1]]):  # pixel "sentinelle" à la fin
-            if pixel == -1:
-                # transparent : on flush si on a un run en cours
-                if current_color is not None:
-                    r, g, b = current_color
-                    fill_rect(
-                        int(x + run_start * scale_x),
-                        int(y + j * scale_y),
-                        max(1, int(run_length * scale_x)),
-                        max(1, int(scale_y)),
-                        color(r, g, b)
-                    )
-                    current_color = None
-                    run_length = 0
-                continue
-
-            if current_color is None:
-                # premier pixel de la série
-                current_color = pixel
-                run_start = i
-                run_length = 1
-            elif pixel == current_color:
-                # même couleur → on allonge la série
-                run_length += 1
-            else:
-                # couleur différente → on dessine la série précédente
-                r, g, b = current_color
-                fill_rect(
-                    int(x + run_start * scale_x),
-                    int(y + j * scale_y),
-                    max(1, int(run_length * scale_x)),
-                    max(1, int(scale_y)),
-                    color(r, g, b)
-                )
-                current_color = pixel
-                run_start = i
-                run_length = 1"""
+from random import randint
 
 def display_image(image_mat, x, y, target_w, x_off=0, y_off=0, w_off=None, h_off=None):
     """
@@ -160,6 +110,37 @@ def get_key_just_pressed():
 
     return just_pressed
 
+last_noise_pixels = []
+
+def apply_noise(intensity=200, strength=25):
+    """
+    Applique un effet de bruit temporaire :
+    - bg et fg : fonctions lambda pour redessiner un pixel du background et du foreground
+    - intensity : nombre de pixels affectés
+    - strength : intensité de la variation
+    """
+
+    global last_noise_pixels
+
+    for (x, y) in last_noise_pixels:
+        # On redessine le pixel original du bg et du fg (superposition)
+        display_image(bg_soporific,0,0,320,x,y,10,1)
+        display_image(fg_soporific, 0, 0, 320, x, y, 10, 1)
+
+    last_noise_pixels = []
+
+    for _ in range(intensity):
+        x = randint(0, 319)
+        y = randint(0, 239)
+
+        r, g, b = get_pixel(x, y)
+        r = max(0, min(255, r + randint(-strength, strength)))
+        g = max(0, min(255, g + randint(-strength, strength)))
+        b = max(0, min(255, b + randint(-strength, strength)))
+
+        fill_rect(x, y, 10,1color(r, g, b))
+        last_noise_pixels.append((x, y))
+
 def game():
     arrow_y1 = []
     speed = 15
@@ -220,9 +201,11 @@ def game():
 
         display_image(bg_soporific, 0, 0, 320, 180, 130, 60, 80)
         display_image(rapperroo_image, x, y, w)
+        display_image(fg_soporific, 0, 0, 320, 180, 130, 60, 80)
 
         display_image(bg_soporific, 0, 0, 320, 50, 130, 60, 80)
         display_image(catnap_pose,50,y,w)
+        display_image(fg_soporific, 0, 0, 320, 50, 130, 60, 80)
 
         display_image(bg_soporific, 0, 0, 320, 40, 30, 80, 20)
         display_image(a_g_left, 40, 30, 20)
@@ -230,6 +213,9 @@ def game():
         display_image(a_g_up, 80, 30, 20)
         display_image(a_g_right, 100, 30, 20)
 
+        display_image(bg_soporific, 0, 0, 320, 70, 198, 180, 13)
+        display_image(rapperroo_image, x, y, w)
+        display_image(catnap_pose, 50, y, w)
         fill_rect(80,200,160,9,'black')
 
         win_x = int((win /100) * 156)
@@ -259,7 +245,7 @@ def game():
 
 
 
-            if note_y <= 240 and note_y >= -20:
+            if note_y <= 240 and note_y >= -40:
                 if soporific_player1[index][1] == 0 or soporific_player1[index][1] == 4:
                     arrow_image = a_c_left
                     note_x = 170
@@ -282,18 +268,30 @@ def game():
                     note_visible = False
                     arrow_y1[index] = -20
                     win += 3
+                    display_image(bg_soporific, 0, 0, 320, note_x, int(note_y) + speed, 20, 20)
+                    if note_y + speed >= 200:
+                        display_image(fg_soporific, 0, 0, 320, note_x, int(note_y) + speed, 20, 20)
                 elif note_direction == "down" and jp[1]:
                     note_visible = False
                     arrow_y1[index] = -20
                     win += 3
+                    display_image(bg_soporific, 0, 0, 320, note_x, int(note_y) + speed, 20, 20)
+                    if note_y + speed >= 200:
+                        display_image(fg_soporific, 0, 0, 320, note_x, int(note_y) + speed, 20, 20)
                 elif note_direction == "up" and jp[2]:
                     note_visible = False
                     arrow_y1[index] = -20
                     win += 3
+                    display_image(bg_soporific, 0, 0, 320, note_x, int(note_y) + speed, 20, 20)
+                    if note_y + speed >= 200:
+                        display_image(fg_soporific, 0, 0, 320, note_x, int(note_y) + speed, 20, 20)
                 elif note_direction == "right" and jp[3]:
                     note_visible = False
                     arrow_y1[index] = -20
                     win += 3
+                    display_image(bg_soporific, 0, 0, 320, note_x, int(note_y) + speed, 20, 20)
+                    if note_y + speed >= 200:
+                        display_image(fg_soporific, 0, 0, 320, note_x, int(note_y) + speed, 20, 20)
 
             if note_y <= 0 and note_y >= 0 - int(speed / 2):
                 win -= 5
@@ -308,8 +306,7 @@ def game():
 
             if (not arrow_image == None) and note_visible:
                 display_image(bg_soporific, 0, 0, 320, note_x, int(note_y) + speed, 20, 20)
-                if note_y + speed >= 200:
-                    display_image(fg_soporific, 0, 0, 320, note_x, int(note_y) + speed, 20, 20)
+                display_image(fg_soporific, 0, 0, 320, note_x, int(note_y) + speed, 20, 20)
                 display_image(arrow_image,note_x,note_y,20)
 
         catnap_pose = c_idle
@@ -342,8 +339,7 @@ def game():
 
             if arrow_image is not None and note_y >= 30:
                 display_image(bg_soporific, 0, 0, 320, note_x, int(note_y) + speed, 20, 20)
-                if note_y + speed >= 200:
-                    display_image(fg_soporific, 0, 0, 320, note_x, int(note_y) + speed, 20, 20)
+                display_image(fg_soporific, 0, 0, 320, note_x, int(note_y) + speed, 20, 20)
                 display_image(arrow_image,note_x,note_y,20)
 
             if note_y <= 30 and note_y >= 30 - int(speed/2):
@@ -363,7 +359,7 @@ def game():
             if catnap_cooldown <= 0:
                 catnap_cooldown = 0
 
-
+        apply_noise(75,25)
 
         delta = monotonic()-s
         if not delta > 0.05:
@@ -460,4 +456,3 @@ def menu(menu_name = "main"):
 
 
 menu("main")
-display_image(bg_soporific,0,0,320,100,100,100,100)
