@@ -165,6 +165,8 @@ def game():
     display_image(bg_soporific, 0, 0, 320)
     display_image(fg_soporific, 0, 0, 320)
 
+    time_ms = 0.0
+
     while True:
         s = monotonic()
         x = 180
@@ -236,6 +238,8 @@ def game():
 
         jp = get_key_just_pressed()
 
+
+
         #notes player 1
         for index, note_y in enumerate(arrow_y1):
             previous_y = note_y
@@ -252,25 +256,29 @@ def game():
             note_direction = None
             note_visible = True
 
-
+            sustain_ms = soporific_player1[index][2]
 
             if note_y <= 240 and note_y >= -40:
                 if soporific_player1[index][1] == 0 or soporific_player1[index][1] == 4:
                     arrow_image = a_c_left
                     note_x = 170
                     note_direction = "left"
+                    note_color = color(187, 100, 134)
                 elif soporific_player1[index][1] == 1 or soporific_player1[index][1] == 5:
                     arrow_image = a_c_down
                     note_x = 190
                     note_direction = "down"
+                    note_color = color(104, 187, 195)
                 elif soporific_player1[index][1] == 2 or soporific_player1[index][1] == 6:
                     arrow_image = a_c_up
                     note_x = 210
                     note_direction = "up"
+                    note_color = color(149, 182, 103)
                 elif soporific_player1[index][1] == 3 or soporific_player1[index][1] == 7:
                     arrow_image = a_c_right
                     note_x = 230
                     note_direction = "right"
+                    note_color = color(214, 83, 83)
 
             if 0 <= note_y <= 60:
                 if (note_direction == "left" and jp[0]) or (note_direction == "down" and jp[1]) or (note_direction == "up" and jp[2]) or (note_direction == "right" and jp[3]):
@@ -279,11 +287,26 @@ def game():
                     win += 3
                     display_image(bg_soporific, 0, 0, 320, note_x, int(previous_y), 20, 20)
                     display_image(bg_soporific, 0, 0, 320, note_x, int(note_y), 20, 20)
+                    if sustain_ms > 0:
+                        sustain_height = int((sustain_ms / 50) * speed)
+                        print(note_x, note_y, previous_y, sustain_ms, sustain_height)
+                        display_image(bg_soporific, 0, 0, 320, note_x + 5, int(previous_y), 10, 240)
+                        display_image(bg_soporific, 0, 0, 320, note_x + 5, int(note_y), 10, 240)
+                        display_image(fg_soporific, 0, 0, 320, note_x + 5, int(previous_y), 10, sustain_height)
+                        display_image(fg_soporific, 0, 0, 320, note_x + 5, int(note_y), 10, sustain_height)
+
+
 
             if note_y <= 0 and note_y >= 0 - int(speed / 2) * int(delta / 0.05):
                 win -= 5
                 display_image(bg_soporific, 0, 0, 320, note_x, int(previous_y), 20, 20)
                 display_image(bg_soporific, 0, 0, 320, note_x, int(note_y), 20, 20)
+                if sustain_ms > 0:
+                    sustain_height = int((sustain_ms / 50) * speed)
+                    display_image(bg_soporific, 0, 0, 320, note_x + 5, int(previous_y), 10, sustain_height)
+                    display_image(bg_soporific, 0, 0, 320, note_x + 5, int(note_y), 10, sustain_height)
+                    display_image(fg_soporific, 0, 0, 320, note_x + 5, int(previous_y), 10, sustain_height)
+                    display_image(fg_soporific, 0, 0, 320, note_x + 5, int(note_y), 10, sustain_height)
 
             if win <= 0:
                 return
@@ -291,12 +314,19 @@ def game():
             if win > 100:
                 win = 100
 
-
+            if sustain_ms > 0 and note_x is not None:
+                sustain_height = int((sustain_ms / 50) * speed)
+                display_image(bg_soporific, 0, 0, 320, note_x + 5, int(previous_y), 10, sustain_height)
+                display_image(bg_soporific, 0, 0, 320, note_x + 5, int(note_y), 10, sustain_height)
+                display_image(fg_soporific, 0, 0, 320, note_x + 5, int(previous_y), 10, sustain_height)
+                display_image(fg_soporific, 0, 0, 320, note_x + 5, int(note_y), 10, sustain_height)
+                fill_rect(note_x + 5, int(note_y), 10, sustain_height, note_color)
 
             if (not arrow_image == None) and note_visible:
                 display_image(bg_soporific, 0, 0, 320, note_x, int(previous_y), 20, 20)
                 display_image(fg_soporific, 0, 0, 320, note_x, int(previous_y), 20, 20)
                 display_image(arrow_image,note_x,note_y,20)
+
 
         catnap_pose = c_idle
         pose = None
@@ -343,15 +373,6 @@ def game():
                 display_image(fg_soporific, 0, 0, 320, note_x, int(previous_y), 20, 20)
                 display_image(arrow_image,note_x,note_y,20)
 
-            if soporific_player2[index][2] > 0 and note_x is not None:
-                end_note_y = ((arrow_y2[index] + soporific_player2[index][2])/50) * speed
-                display_image(bg_soporific, 0, 0, 320, note_x +5, 0, 10, 240)
-                display_image(fg_soporific, 0, 0, 320, note_x +5, 0, 10, 240)
-                fill_rect(note_x +5, int(note_y) if note_y >= 30 else 30,10,int(end_note_y) - int(note_y) if note_y >= 30 else int(end_note_y) - 30,note_color)
-
-
-
-
             if note_y <= 10 and previous_y >= 10:
 
                 display_image(bg_soporific, 0, 0, 320, note_x, int(previous_y), 20, 20)
@@ -388,8 +409,10 @@ def game():
         if not delta > 0.05:
             sleep(0.05-delta)
             fps = int(1/0.05)
+            time_ms += 50
         else:
             fps = int(1/delta)
+            time_ms += int(delta * 1000)
 
         draw_string("FPS : " + f"{fps:02}", 0, 0, 'white', 'black')
 
@@ -481,4 +504,6 @@ def menu(menu_name = "main"):
 
 
 
+
 menu("main")
+display_image(bg_soporific, 0, 0, 320, 5, 53, 10, 134)
