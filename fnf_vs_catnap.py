@@ -208,7 +208,7 @@ def game():
         display_image(catnap_pose,50,y,w)
         display_image(fg_soporific, 0, 0, 320, 50, 130, 60, 80)
 
-        display_image(bg_soporific, 0, 0, 320, 40, 30, 80, 20)
+        display_image(bg_soporific, 0, 0, 320, 40, 30, 80, 60)
         display_image(a_g_left, 40, 30, 20)
         display_image(a_g_down, 60, 30, 20)
         display_image(a_g_up, 80, 30, 20)
@@ -278,10 +278,12 @@ def game():
                     arrow_y1[index] = -20
                     win += 3
                     display_image(bg_soporific, 0, 0, 320, note_x, int(previous_y), 20, 20)
-                    display_image(fg_soporific, 0, 0, 320, note_x, int(previous_y), 20, 20)
+                    display_image(bg_soporific, 0, 0, 320, note_x, int(note_y), 20, 20)
 
-            if note_y <= 0 and note_y >= 0 - int(speed / 2):
+            if note_y <= 0 and note_y >= 0 - int(speed / 2) * int(delta / 0.05):
                 win -= 5
+                display_image(bg_soporific, 0, 0, 320, note_x, int(previous_y), 20, 20)
+                display_image(bg_soporific, 0, 0, 320, note_x, int(note_y), 20, 20)
 
             if win <= 0:
                 return
@@ -292,8 +294,8 @@ def game():
 
 
             if (not arrow_image == None) and note_visible:
-                display_image(bg_soporific, 0, 0, 320, note_x, int(note_y) + speed, 20, 20)
-                display_image(fg_soporific, 0, 0, 320, note_x, int(note_y) + speed, 20, 20)
+                display_image(bg_soporific, 0, 0, 320, note_x, int(previous_y), 20, 20)
+                display_image(fg_soporific, 0, 0, 320, note_x, int(previous_y), 20, 20)
                 display_image(arrow_image,note_x,note_y,20)
 
         catnap_pose = c_idle
@@ -318,36 +320,60 @@ def game():
                     arrow_image = a_c_left
                     note_x = 40
                     pose = c_left
+                    note_color = color(187,100,134)
                 elif soporific_player2[index][1] == 1 or soporific_player2[index][1] == 5:
                     arrow_image = a_c_down
                     note_x = 60
                     pose = c_down
+                    note_color = color(104,187,195)
                 elif soporific_player2[index][1] == 2 or soporific_player2[index][1] == 6:
                     arrow_image = a_c_up
                     note_x = 80
                     pose = c_up
+                    note_color = color(149,182,103)
                 elif soporific_player2[index][1] == 3 or soporific_player2[index][1] == 7:
                     arrow_image = a_c_right
                     note_x = 100
                     pose = c_right
+                    note_color = color(214,83,83)
 
 
-            if arrow_image is not None and note_y >= 30:
+            if arrow_image is not None and note_y >= 30 and note_x is not None:
                 display_image(bg_soporific, 0, 0, 320, note_x, int(previous_y), 20, 20)
                 display_image(fg_soporific, 0, 0, 320, note_x, int(previous_y), 20, 20)
                 display_image(arrow_image,note_x,note_y,20)
 
-            if note_y <= 0 and note_y >= 30 - int(speed/2):
+            if soporific_player2[index][2] > 0 and note_x is not None:
+                end_note_y = ((arrow_y2[index] + soporific_player2[index][2])/50) * speed
+                display_image(bg_soporific, 0, 0, 320, note_x +5, 0, 10, 240)
+                display_image(fg_soporific, 0, 0, 320, note_x +5, 0, 10, 240)
+                fill_rect(note_x +5, int(note_y) if note_y >= 30 else 30,10,int(end_note_y) - int(note_y) if note_y >= 30 else int(end_note_y) - 30,note_color)
+
+
+
+
+            if note_y <= 10 and previous_y >= 10:
+
+                display_image(bg_soporific, 0, 0, 320, note_x, int(previous_y), 20, 20)
+
+                if delta <= 0.05:
+                    previous_y += speed
+                else:
+                    previous_y += speed * (delta / 0.05)
+
+                display_image(bg_soporific, 0, 0, 320, note_x, int(previous_y), 20, 20)
                 display_image(bg_soporific, 0, 0, 320, note_x, int(note_y), 20, 20)
+                display_image(bg_soporific, 0, 0, 320, note_x + 5, 0, 10, 240)
+                display_image(fg_soporific, 0, 0, 320, note_x + 5, 0, 10, 240)
                 win -=2
                 if win <= 1:
                     win = 1
 
             if note_y <= 30 and note_y >= -30:
-                if catnap_cooldown ==0:
+                if catnap_cooldown ==0 or pose is not None:
                     catnap_pose = pose
                     last_catnap_pose = catnap_pose
-                    catnap_cooldown = 5
+                    catnap_cooldown = 10
                 else:
                     catnap_pose = last_catnap_pose
 
@@ -355,7 +381,7 @@ def game():
             if catnap_cooldown <= 0:
                 catnap_cooldown = 0
 
-        apply_noise(75,25)
+        apply_noise(50,10)
 
 
         delta = monotonic()-s
@@ -363,8 +389,6 @@ def game():
             sleep(0.05-delta)
             fps = int(1/0.05)
         else:
-            print("Performance issue !")
-            print(delta)
             fps = int(1/delta)
 
         draw_string("FPS : " + f"{fps:02}", 0, 0, 'white', 'black')
