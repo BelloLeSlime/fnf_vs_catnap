@@ -241,10 +241,10 @@ def game():
             previous_y = note_y
 
             if delta <= 0.05:
-                arrow_y2[index] -= speed
+                arrow_y1[index] -= speed
                 note_y -= speed
             else:
-                arrow_y2[index] -= speed * (delta / 0.05)
+                arrow_y1[index] -= speed * (delta / 0.05)
                 note_y -= speed * (delta / 0.05)
 
             arrow_image = None
@@ -273,30 +273,12 @@ def game():
                     note_direction = "right"
 
             if 0 <= note_y <= 60:
-                if note_direction == "left" and jp[0]:
+                if (note_direction == "left" and jp[0]) or (note_direction == "down" and jp[1]) or (note_direction == "up" and jp[2]) or (note_direction == "right" and jp[3]):
                     note_visible = False
                     arrow_y1[index] = -20
                     win += 3
-                    display_image(bg_soporific, 0, 0, 320, note_x, int(previous_y) + speed, 20, 20)
-                    display_image(fg_soporific, 0, 0, 320, note_x, int(previous_y) + speed, 20, 20)
-                elif note_direction == "down" and jp[1]:
-                    note_visible = False
-                    arrow_y1[index] = -20
-                    win += 3
-                    display_image(bg_soporific, 0, 0, 320, note_x, int(note_y) + speed, 20, 20)
-                    display_image(fg_soporific, 0, 0, 320, note_x, int(note_y) + speed, 20, 20)
-                elif note_direction == "up" and jp[2]:
-                    note_visible = False
-                    arrow_y1[index] = -20
-                    win += 3
-                    display_image(bg_soporific, 0, 0, 320, note_x, int(note_y) + speed, 20, 20)
-                    display_image(fg_soporific, 0, 0, 320, note_x, int(note_y) + speed, 20, 20)
-                elif note_direction == "right" and jp[3]:
-                    note_visible = False
-                    arrow_y1[index] = -20
-                    win += 3
-                    display_image(bg_soporific, 0, 0, 320, note_x, int(note_y) + speed, 20, 20)
-                    display_image(fg_soporific, 0, 0, 320, note_x, int(note_y) + speed, 20, 20)
+                    display_image(bg_soporific, 0, 0, 320, note_x, int(previous_y), 20, 20)
+                    display_image(fg_soporific, 0, 0, 320, note_x, int(previous_y), 20, 20)
 
             if note_y <= 0 and note_y >= 0 - int(speed / 2):
                 win -= 5
@@ -351,11 +333,12 @@ def game():
 
 
             if arrow_image is not None and note_y >= 30:
-                display_image(bg_soporific, 0, 0, 320, note_x, int(previous_y) + speed, 20, 20)
-                display_image(fg_soporific, 0, 0, 320, note_x, int(previous_y) + speed, 20, 20)
+                display_image(bg_soporific, 0, 0, 320, note_x, int(previous_y), 20, 20)
+                display_image(fg_soporific, 0, 0, 320, note_x, int(previous_y), 20, 20)
                 display_image(arrow_image,note_x,note_y,20)
 
-            if note_y <= 30 and note_y >= 30 - int(speed/2):
+            if note_y <= 0 and note_y >= 30 - int(speed/2):
+                display_image(bg_soporific, 0, 0, 320, note_x, int(note_y), 20, 20)
                 win -=2
                 if win <= 1:
                     win = 1
