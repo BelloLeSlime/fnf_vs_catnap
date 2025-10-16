@@ -132,13 +132,15 @@ def apply_noise(intensity=200, strength=25):
     for _ in range(intensity):
         x = randint(0, 319)
         y = randint(0, 239)
+        for x_offset in range(10):
 
-        r, g, b = get_pixel(x, y)
-        r = max(0, min(255, r + randint(-strength, strength)))
-        g = max(0, min(255, g + randint(-strength, strength)))
-        b = max(0, min(255, b + randint(-strength, strength)))
+            r, g, b = get_pixel(x, y)
+            r = max(0, min(255, r + randint(-strength, strength)))
+            g = max(0, min(255, g + randint(-strength, strength)))
+            b = max(0, min(255, b + randint(-strength, strength)))
 
-        fill_rect(x, y, 10,1,color(r, g, b))
+            set_pixel(x + x_offset, y,color(r, g, b))
+
         last_noise_pixels.append((x, y))
 
 def game():
@@ -183,7 +185,8 @@ def game():
         else:
             rapperroo_image = r_idle
 
-        display_image(bg_soporific, 0, 0, 320, 170, 30, 80, 20)
+        display_image(bg_soporific, 0, 0, 320, 170, 0, 80, 50)
+
 
         if kd(KEY_LEFT):
             display_image(a_c_left, 170, 30, 20)
@@ -258,7 +261,7 @@ def game():
 
             sustain_ms = soporific_player1[index][2]
 
-            if note_y <= 240 and note_y >= -40:
+            if note_y <= 240 and note_y >= -480:
                 if soporific_player1[index][1] == 0 or soporific_player1[index][1] == 4:
                     arrow_image = a_c_left
                     note_x = 170
@@ -289,7 +292,6 @@ def game():
                     display_image(bg_soporific, 0, 0, 320, note_x, int(note_y), 20, 20)
                     if sustain_ms > 0:
                         sustain_height = int((sustain_ms / 50) * speed)
-                        print(note_x, note_y, previous_y, sustain_ms, sustain_height)
                         display_image(bg_soporific, 0, 0, 320, note_x + 5, int(previous_y), 10, 240)
                         display_image(bg_soporific, 0, 0, 320, note_x + 5, int(note_y), 10, 240)
                         display_image(fg_soporific, 0, 0, 320, note_x + 5, int(previous_y), 10, sustain_height)
@@ -299,6 +301,7 @@ def game():
 
             if note_y <= 0 and note_y >= 0 - int(speed / 2) * int(delta / 0.05):
                 win -= 5
+                note_visible = False
                 display_image(bg_soporific, 0, 0, 320, note_x, int(previous_y), 20, 20)
                 display_image(bg_soporific, 0, 0, 320, note_x, int(note_y), 20, 20)
                 if sustain_ms > 0:
@@ -314,13 +317,14 @@ def game():
             if win > 100:
                 win = 100
 
-            if sustain_ms > 0 and note_x is not None:
+            if (sustain_ms > 0) and (note_x is not None) and note_visible:
                 sustain_height = int((sustain_ms / 50) * speed)
                 display_image(bg_soporific, 0, 0, 320, note_x + 5, int(previous_y), 10, sustain_height)
                 display_image(bg_soporific, 0, 0, 320, note_x + 5, int(note_y), 10, sustain_height)
                 display_image(fg_soporific, 0, 0, 320, note_x + 5, int(previous_y), 10, sustain_height)
                 display_image(fg_soporific, 0, 0, 320, note_x + 5, int(note_y), 10, sustain_height)
                 fill_rect(note_x + 5, int(note_y), 10, sustain_height, note_color)
+                display_image(bg_soporific, 0, 0, 320, 170, 0, 80, 30)
 
             if (not arrow_image == None) and note_visible:
                 display_image(bg_soporific, 0, 0, 320, note_x, int(previous_y), 20, 20)
@@ -373,7 +377,7 @@ def game():
                 display_image(fg_soporific, 0, 0, 320, note_x, int(previous_y), 20, 20)
                 display_image(arrow_image,note_x,note_y,20)
 
-            if note_y <= 10 and previous_y >= 10:
+            if note_y <= 10 and previous_y >= 10 and note_x is not None:
 
                 display_image(bg_soporific, 0, 0, 320, note_x, int(previous_y), 20, 20)
 
@@ -402,7 +406,7 @@ def game():
             if catnap_cooldown <= 0:
                 catnap_cooldown = 0
 
-        apply_noise(50,10)
+        #apply_noise(50,10)
 
 
         delta = monotonic()-s
