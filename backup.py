@@ -1,5 +1,5 @@
 from kandinsky import *
-from fnf_data import *
+from mod_data import *
 from fnf_images import *
 from ion import *
 from ion import keydown as kd
