@@ -5,6 +5,13 @@ from ion import keydown as kd
 from time import *
 from random import randint
 
+try:
+    from winsound import *
+    sound = True
+except Exception as e:
+    sound = False
+
+
 def display_image(image_mat, x, y, target_w, x_off=0, y_off=0, w_off=None, h_off=None):
     """
     Affiche l'image image_mat à (x, y) avec largeur cible target_w,
@@ -49,7 +56,6 @@ def display_image(image_mat, x, y, target_w, x_off=0, y_off=0, w_off=None, h_off
                     screen_x = int(x + run_start * scale_x)
                     next_x = screen_x + int(run_length * scale_x)
 
-                    # On clip sur les bornes visibles
                     clip_x1 = max(screen_x, x_min)
                     clip_x2 = min(next_x, x_max)
 
@@ -111,21 +117,23 @@ def get_key_just_pressed():
 
 last_noise_pixels = []
 
-def apply_noise(intensity=75, strength=10, background=None, foreground=None):
-
+def remove_noise(background = None, foreground = None):
     global last_noise_pixels
-
     for (x, y) in last_noise_pixels:
-        # On redessine le pixel original du bg et du fg (superposition)
         display_image(background,0,0,320,x,y,10,1)
         display_image(foreground, 0, 0, 320, x, y, 10, 1)
 
     last_noise_pixels = []
 
+def apply_noise(intensity=75, strength=10):
+
+    global last_noise_pixels
+
     for _ in range(intensity):
         x = randint(0, 319)
         y = randint(0, 239)
-        for x_offset in range(10):
+
+        for x_offset in range(randint(1,10)):
 
             r, g, b = get_pixel(x, y)
             r = max(0, min(255, r + randint(-strength, strength)))
@@ -137,6 +145,11 @@ def apply_noise(intensity=75, strength=10, background=None, foreground=None):
         last_noise_pixels.append((x, y))
 
 def game():
+
+    global song
+
+    if sound:
+        PlaySound(None, SND_PURGE)
 
     notes_player1 = song["player1"]["notes"]
     notes_player2 = song["player2"]["notes"]
@@ -167,25 +180,33 @@ def game():
 
     shaders = song["shaders"]
 
+    song_time = song["time"] * 1000
+
+    music = song["music_path"]
+
+    if sound:
+        PlaySound(music, SND_FILENAME | SND_ASYNC)
+
     delta = 0.0
     arrow_y1 = []
     for note in notes_player1:
         y_value = note[0]
-        y_value = (y_value / 50) * speed
+        y_value = (y_value / 50) * speed + 30
         arrow_y1.append(y_value)
 
     arrow_y2 = []
     for note in notes_player2:
         y_value = note[0]
-        y_value = (y_value / 50) * speed
+        y_value = (y_value / 50) * speed + 30
         arrow_y2.append(y_value)
 
-    turn = 0
     win = 50
 
     x = 180
     y = 130
     w = 60
+
+    fps = 20
 
     player2_pose = player2_idle
     player2_cooldown = 0
@@ -198,6 +219,9 @@ def game():
     while True:
 
         s = monotonic()
+
+        if "apply_noise" in shaders:
+            remove_noise(bg,fg)
 
         if kd(KEY_DOWN):
            player1_pose = player1_down
@@ -281,7 +305,7 @@ def game():
 
             sustain_ms = notes_player1[index][2]
 
-            if note_y <= 240 and note_y >= -500:
+            if 240 >= note_y >= -500:
                 if soporific_player1[index][1] == 0 or soporific_player1[index][1] == 4:
                     arrow_image = a_c_left
                     note_x = 170
@@ -314,7 +338,7 @@ def game():
 
 
 
-            if note_y <= 0 and note_y >= 0 - int(speed / 2) * int(delta / 0.05):
+            if 0 >= note_y >= 0 - int(speed / 2) * int(delta / 0.05):
                 win -= 5
                 note_visible = False
                 display_image(bg, 0, 0, 320, note_x, int(previous_y), 20, 20)
@@ -341,7 +365,7 @@ def game():
                 fill_rect(note_x + 5, int(note_y), 10, sustain_height, note_color)
                 display_image(bg, 0, 0, 320, 170, 0, 80, 30)
 
-            if (not arrow_image == None) and note_visible:
+            if (arrow_image is not None) and note_visible:
                 display_image(bg, 0, 0, 320, note_x, int(previous_y), 20, 20)
                 display_image(fg, 0, 0, 320, note_x, int(previous_y), 20, 20)
                 display_image(arrow_image,note_x,note_y,20)
@@ -364,7 +388,7 @@ def game():
 
             arrow_image = None
             note_x = None
-            if note_y <= 240 and note_y >= -30:
+            if 240 >= note_y >= -30:
                 if soporific_player2[index][1] == 0 or soporific_player2[index][1] == 4:
                     arrow_image = a_c_left
                     note_x = 40
@@ -392,7 +416,7 @@ def game():
                 display_image(fg, 0, 0, 320, note_x, int(previous_y), 20, 20)
                 display_image(arrow_image,note_x,note_y,20)
 
-            if note_y <= 10 and previous_y >= 10 and note_x is not None:
+            if note_y <= 10 <= previous_y and note_x is not None:
 
                 display_image(bg, 0, 0, 320, note_x, int(previous_y), 20, 20)
 
@@ -409,7 +433,7 @@ def game():
                 if win <= 1:
                     win = 1
 
-            if note_y <= 30 and note_y >= -30:
+            if 30 >= note_y >= -30:
                 if player2_cooldown ==0 or pose is not None:
                     player2_pose = pose
                     last_player2_pose = player2_pose
@@ -421,9 +445,16 @@ def game():
             if player2_cooldown <= 0:
                 player2_cooldown = 0
 
-        if "apply_noise" in shaders:
-            apply_noise(50,10, bg, fg)
 
+
+        fill_rect(108,10,104,9,'black')
+        time_w = int(time_ms / song_time * 100)
+        fill_rect(110,12,time_w,5,'white')
+
+        draw_string("FPS : " + f"{fps:02}", 0, 0, 'white', 'black')
+
+        if "apply_noise" in shaders:
+            apply_noise(50,10)
 
         delta = monotonic()-s
         if not delta > 0.05:
@@ -434,10 +465,16 @@ def game():
             fps = int(1/delta)
             time_ms += int(delta * 1000)
 
-        draw_string("FPS : " + f"{fps:02}", 0, 0, 'white', 'black')
+
+
+        if time_ms >= song_time:
+            return
 
 def menu(menu_name = "main"):
+    global song
     menu = menu_name
+    if sound:
+        PlaySound(menu_music, SND_FILENAME | SND_ASYNC | SND_LOOP)
     display_image(bg_main_menu,0,0,320)
     draw_string("Press OK to start",10,140,'white','black')
     index_cursor = 0
@@ -464,7 +501,7 @@ def menu(menu_name = "main"):
             if index_cursor < 0:
                 index_cursor = 0
 
-            for i in range(-3,3):
+            for i in range(-4,4):
                 if i + index_cursor >= 0 and i + index_cursor <= 3:
                     if i == 0:
                         draw_string(menu_button[i + index_cursor],50,30 * i + 100,'yellow',color(72,37,134))
@@ -488,7 +525,7 @@ def menu(menu_name = "main"):
                 index_cursor = 0
 
             for i in range(-len(songs_names), len(songs_names)):
-                if i + index_cursor >= 0 and i + index_cursor <= 8:
+                if i + index_cursor >= 0 and i + index_cursor <= len(songs_names)-1:
                     if i == 0:
                         draw_string(songs_names[i + index_cursor], 50, 30 * i + 100, 'yellow', color(72, 37, 134))
                     else:
@@ -496,7 +533,10 @@ def menu(menu_name = "main"):
 
             if jp[4]:
                 song = songs[index_cursor]
+                print(index_cursor)
                 game()
+                if sound:
+                    PlaySound(menu_music, SND_FILENAME | SND_ASYNC | SND_LOOP)
             if jp[5]:
                 index_cursor = 0
                 menu = "mode"
@@ -519,10 +559,14 @@ songs_names = []
 for song in songs:
     songs_names.append(song["name"])
 
+song = None
+
 weeks = mod["weeks"]
 weeks_names = []
 
 for week in weeks:
     weeks_names.append(week["name"])
+
+menu_music = mod["menu_music_path"]
 
 menu("main")

@@ -42,4 +42,4 @@ def extractor(input_file, output_file):
     print(f"Extraction terminée ! Résultat enregistré dans '{output_file}'.")
 
 if __name__ == "__main__":
-    extractor("data/soporific.json", "output.txt")
+    extractor("data/bootleg.json", "output.txt")
